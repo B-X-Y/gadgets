@@ -1,5 +1,6 @@
 import time
 import pyautogui
+import schedule
 
 
 def start_typing():
@@ -19,9 +20,29 @@ def start_typing():
 
     print("Done.")
 
+    return schedule.CancelJob
+
+
+def start():
+    while True:
+        ans = input("Do you want to schedule your typing? [Y/N] ").lower()
+        if ans in ("y", "n"):
+            break
+
+    if ans == "y":
+        scheduled_time = input("Enter the time to execute your typing: ")
+        print("Scheduling...")
+        schedule.every().day.at(scheduled_time).do(start_typing)
+        while True:
+            schedule.run_pending()
+            jobs = schedule.get_jobs()
+            if not jobs:
+                break
+            time.sleep(1)
+
+    if ans == "n":
+        start_typing()
+
 
 if __name__ == "__main__":
-    try:
-        start_typing()
-    except KeyboardInterrupt:
-        print("Stopped by user.")
+    start()
