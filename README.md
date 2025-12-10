@@ -9,6 +9,7 @@
 * [Installation](#installation)
 * [Available Gadgets](#available-gadgets)
     * [Mimic Typer](#mimic-typer)
+    * [Humanizer](#humanizer)
 
 ---
 
@@ -17,15 +18,21 @@
 **Gadgets** is a collection of small, experimental scripts and utilities.
 Each gadget is independent and may include its own usage instructions and behavior.
 
-At the moment, the repository contains a single gadget with more planned for the future.
+The repository currently contains multiple gadgets, with more planned for the future.
 
 ---
 
 ## Project Structure
 
 ```
+├── .gitignore
+├── LICENSE
+├── README-CN.md
 ├── README.md
+├── humanizer.py
 ├── mimic_typer.py
+├── prompt.md
+├── prompt_v2.md
 └── requirements.txt
 ```
 
@@ -69,6 +76,25 @@ python mimic_typer.py
 ```
 
 After a short delay, it begins typing at your current cursor position.
+
+### Humanizer
+
+**Humanizer** rewrites or paraphrases an essay using an AI-powered rephrasing engine, producing a more natural and
+human-like version of the original text.
+
+#### Usage
+
+1. Create a file named `essay_to_humanize.txt` in the repository root.
+2. Place the essay you want to humanize into that file.
+3. Run the script:
+
+```bash
+python humanizer.py
+```
+
+The humanized result will be saved as `humanized_essay.txt`
+
+---
 
 ## LICENSE
 

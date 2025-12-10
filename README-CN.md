@@ -9,6 +9,7 @@
 * [安装](#安装)
 * [可用的 Gadgets](#可用的-gadgets)
     * [Mimic Typer](#mimic-typer)
+    * [Humanizer](#humanizer)
 
 ---
 
@@ -17,15 +18,21 @@
 **Gadgets** 是一组小型的实验性脚本和工具集合。
 每个 gadget 都是独立的，并且可能包含其自己的使用说明和行为。
 
-目前，该仓库包含一个 gadget，未来会加入更多。
+该仓库目前包含多个 gadgets，未来还将加入更多。
 
 ---
 
 ## 项目结构
 
 ```
+├── .gitignore
+├── LICENSE
+├── README-CN.md
 ├── README.md
+├── humanizer.py
 ├── mimic_typer.py
+├── prompt.md
+├── prompt_v2.md
 └── requirements.txt
 ```
 
@@ -68,6 +75,24 @@ python mimic_typer.py
 ```
 
 短暂延迟后，它将开始在你当前的光标位置输入文本。
+
+### Humanizer
+
+**Humanizer** 使用 AI 驱动的改写引擎来重写或改述一篇文章，使其变得更加自然，更像人类撰写。
+
+#### 使用方法
+
+1. 在仓库根目录创建 `essay_to_humanize.txt` 文件。
+2. 将你想进行 humanize 的文章放入该文件。
+3. 运行脚本：
+
+```bash
+python humanizer.py
+```
+
+处理后的结果将保存为 `humanized_essay.txt`。
+
+---
 
 ## LICENSE
 
