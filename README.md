@@ -66,3 +66,7 @@ python mimic_typer.py
 ```
 
 After a short delay, it begins typing at your current cursor position.
+
+## LICENSE
+
+This project is licensed under the MIT License. Please see the [LICENSE](./LICENSE) file for details.
