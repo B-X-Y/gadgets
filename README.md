@@ -1,12 +1,14 @@
 # Gadgets
 
+[English](./README.md) | [中文文档](./README-CN.md)
+
 ## Table of Contents
 
 * [Overview](#overview)
 * [Project Structure](#project-structure)
 * [Installation](#installation)
 * [Available Gadgets](#available-gadgets)
-  * [Mimic Typer](#mimic-typer)
+    * [Mimic Typer](#mimic-typer)
 
 ---
 
@@ -53,7 +55,8 @@ pip install -r requirements.txt
 
 ### Mimic Typer
 
-**Mimic Typer** simulates human typing by outputting text character-by-character with natural delays, making the behavior resemble genuine keyboard input and reducing the likelihood of detection by systems that flag automated typing.
+**Mimic Typer** simulates human typing by outputting text character-by-character with natural delays, making the
+behavior resemble genuine keyboard input and reducing the likelihood of detection by systems that flag automated typing.
 
 #### Usage
 
