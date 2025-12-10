@@ -1,4 +1,6 @@
+import random
 import time
+
 import pyautogui
 import schedule
 
@@ -8,14 +10,21 @@ def start_typing():
         text = f.read()
 
     delay_before_start = 5
-    char_interval = 0.2
 
     print(f"Typing will start in {delay_before_start} seconds.")
     print("Quickly move your cursor to the input box where you want the text to appear...")
     time.sleep(delay_before_start)
 
     print("Typing now...")
-    pyautogui.typewrite(text, interval=char_interval)
+    for char in text:
+        pyautogui.typewrite(char)
+        if char == " ":
+            time.sleep(random.uniform(0.01, 0.2))
+        if char in (".", "!", "?"):
+            time.sleep(random.uniform(2.0, 3.0))
+        if char == "\n":
+            time.sleep(random.uniform(20.0, 30.0))
+
     pyautogui.press("enter")
 
     print("Done.")
