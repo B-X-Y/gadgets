@@ -6,6 +6,7 @@ import schedule
 
 
 def start_typing():
+    pyautogui.PAUSE = 0
     with open("text_to_type.txt", "r", encoding="utf-8") as f:
         text = f.read()
 
@@ -17,11 +18,12 @@ def start_typing():
 
     print("Typing now...")
     for char in text:
+        time.sleep(random.uniform(0.1, 0.3))
         pyautogui.typewrite(char)
         if char == " ":
-            time.sleep(random.uniform(0.01, 0.2))
+            time.sleep(random.uniform(0.2, 0.5))
         if char in (".", "!", "?"):
-            time.sleep(random.uniform(2.0, 3.0))
+            time.sleep(random.uniform(1.0, 3.0))
         if char == "\n":
             time.sleep(random.uniform(20.0, 30.0))
 
