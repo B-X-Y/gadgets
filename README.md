@@ -5,7 +5,6 @@
 ## Table of Contents
 
 * [Overview](#overview)
-* [Project Structure](#project-structure)
 * [Installation](#installation)
 * [Available Gadgets](#available-gadgets)
     * [Mimic Typer](#mimic-typer)
@@ -19,25 +18,6 @@
 Each gadget is independent and may include its own usage instructions and behavior.
 
 The repository currently contains multiple gadgets, with more planned for the future.
-
----
-
-## Project Structure
-
-```
-├── .gitignore
-├── LICENSE
-├── README-CN.md
-├── README.md
-├── humanizer.py
-├── mimic_typer.py
-├── prompt.md
-├── prompt_v2.md
-└── requirements.txt
-```
-
-All files currently reside in the project root.
-Future gadgets may appear as standalone scripts or folders depending on their complexity.
 
 ---
 

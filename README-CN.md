@@ -5,7 +5,6 @@
 ## 目录
 
 * [概述](#概述)
-* [项目结构](#项目结构)
 * [安装](#安装)
 * [可用的 Gadgets](#可用的-gadgets)
     * [Mimic Typer](#mimic-typer)
@@ -19,25 +18,6 @@
 每个 gadget 都是独立的，并且可能包含其自己的使用说明和行为。
 
 该仓库目前包含多个 gadgets，未来还将加入更多。
-
----
-
-## 项目结构
-
-```
-├── .gitignore
-├── LICENSE
-├── README-CN.md
-├── README.md
-├── humanizer.py
-├── mimic_typer.py
-├── prompt.md
-├── prompt_v2.md
-└── requirements.txt
-```
-
-所有文件目前都位于项目根目录。
-未来的 gadgets 可能会以独立脚本或文件夹的形式出现，具体取决于其复杂度。
 
 ---
 

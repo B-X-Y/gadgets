@@ -10,7 +10,7 @@ client = Client(
 )
 
 print("Reading system prompt...")
-with open("prompt_v2.md", "r", encoding="utf-8") as f:
+with open("prompts/prompt_v2.md", "r", encoding="utf-8") as f:
     system_prompt = f.read()
 user_prompt = """
 Paragraph: {}
