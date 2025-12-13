@@ -1,4 +1,5 @@
 import random
+import string
 import time
 
 import pyautogui
@@ -11,6 +12,7 @@ def start_typing():
         text = f.read()
 
     delay_before_start = 5
+    accuracy = 0.95
 
     print(f"Typing will start in {delay_before_start} seconds.")
     print("Quickly move your cursor to the input box where you want the text to appear...")
@@ -19,6 +21,12 @@ def start_typing():
     print("Typing now...")
     for char in text:
         time.sleep(random.uniform(0.1, 0.3))
+
+        if accuracy < random.uniform(0, 1):
+            pyautogui.typewrite(random.choice(string.ascii_letters))
+            time.sleep(0.4)
+            pyautogui.press("backspace")
+
         pyautogui.typewrite(char)
         if char == " ":
             time.sleep(random.uniform(0.2, 0.5))
